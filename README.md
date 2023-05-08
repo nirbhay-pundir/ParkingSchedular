@@ -1,7 +1,7 @@
-#Parking-Schedular
- This is a Java Swing application that allows users to manage vehicle parking in a parking lot. The system uses JDBC to connect to a MySQL database and stores information about the vehicles, parking slots, and parking charges.
+# Parking-Schedular
+This is a Java Swing application that allows users to manage vehicle parking in a parking lot. The system uses JDBC to connect to a MySQL database and stores information about the vehicles, parking slots, and parking charges.
 
-#Features
+# Features
 The Vehicle Parking Management System has the following features:
 
 Login and registration for users
