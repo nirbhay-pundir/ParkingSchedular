@@ -42,16 +42,20 @@ To run this application, you need:
 
 ## Screenshots
 
-Login Screen!
-[image](https://user-images.githubusercontent.com/43448844/236745186-de381d12-e656-476f-b4bd-653409050678.png)
+Login Screen
+
+![image](https://user-images.githubusercontent.com/43448844/236745186-de381d12-e656-476f-b4bd-653409050678.png)
 
 Registration Screen
+
 ![image](https://user-images.githubusercontent.com/43448844/236745274-b6ec85ba-3ca9-431f-91aa-c5730954bf5f.png)
 
 User Dashboard Screen
+
 ![image](https://user-images.githubusercontent.com/43448844/236745552-5f2bcc96-a3c4-444d-87ad-e27d6eab5dd1.png)
 
 Slot Release Screenshot
+
 ![image](https://user-images.githubusercontent.com/43448844/236745663-8fc27254-5c8c-45a3-aa47-870f8dfd03b1.png)
 
 ### Please feel free to contribute by submitting bug reports or feature requests.
