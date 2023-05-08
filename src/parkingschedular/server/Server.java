@@ -49,8 +49,8 @@ import javax.swing.table.DefaultTableModel;
 public class Server {
 
     static String url = "jdbc:mysql://localhost:3306/parkingschedular?zeroDateTimeBehavior=CONVERT_TO_NULL";
-    static String user = "root";
-    static String pass = "Abcxyz@8979";
+    static String user = "";
+    static String pass = "";
 
     /**
      * <p>
