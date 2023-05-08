@@ -36,12 +36,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
- * <p>
- * Utility class.
- * </p>
  *
  * @author Nirbhay Pundir
- * @version $Id: $Id
  */
 public final class Utility {
 
@@ -54,11 +50,6 @@ public final class Utility {
     public int xMouse;
     public int yMouse;
 
-    /**
-     * <p>
-     * Constructor for Utility.
-     * </p>
-     */
     public Utility() {
         imageCloseh = scaleImage("closeh.png", 24);
         imageClose = scaleImage("close.png", 24);
@@ -71,53 +62,23 @@ public final class Utility {
         }
     }
 
-    /**
-     * <p>
-     * setCorners.
-     * </p>
-     *
-     * @param frame a {@link javax.swing.JFrame} object
-     */
     public void setCorners(JFrame frame) {
         roundedRectangle = new RoundRectangle2D.Double(0, 0, frame.getWidth(), frame.getHeight(), 20, 20);
         frame.setShape(roundedRectangle);
     }
 
-    /**
-     * <p>
-     * fieldFocused.
-     * </p>
-     *
-     * @param field a {@link javax.swing.JTextField} object
-     */
     public void fieldFocused(JTextField field) {
         field.setBorder(javax.swing.BorderFactory.createCompoundBorder(
                 javax.swing.BorderFactory.createMatteBorder(1, 1, 2, 1, new java.awt.Color(204, 255, 255)),
                 javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 1)));
     }
 
-    /**
-     * <p>
-     * fieldLeave.
-     * </p>
-     *
-     * @param field a {@link javax.swing.JTextField} object
-     */
     public void fieldLeave(JTextField field) {
         field.setBorder(javax.swing.BorderFactory.createCompoundBorder(
                 javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(204, 255, 255)),
                 javax.swing.BorderFactory.createEmptyBorder(1, 5, 1, 1)));
     }
 
-    /**
-     * <p>
-     * scaleImage.
-     * </p>
-     *
-     * @param location a {@link java.lang.String} object
-     * @param size     a int
-     * @return a {@link javax.swing.ImageIcon} object
-     */
     public ImageIcon scaleImage(String location, int size) {
         BufferedImage img = null;
         try {
@@ -139,14 +100,6 @@ public final class Utility {
         }
     }
 
-    /**
-     * <p>
-     * switchFrame.
-     * </p>
-     *
-     * @param f1 a {@link javax.swing.JFrame} object
-     * @param f2 a {@link javax.swing.JFrame} object
-     */
     public void switchFrame(JFrame f1, JFrame f2) {
         f1.setEnabled(false);
         try {
@@ -160,13 +113,6 @@ public final class Utility {
         f2.setEnabled(true);
     }
 
-    /**
-     * <p>
-     * table.
-     * </p>
-     *
-     * @param t a {@link javax.swing.JTable} object
-     */
     public void table(JTable t) {
         t.getTableHeader().setBackground(new Color(80, 200, 103));
         t.getTableHeader().setFont(new java.awt.Font("Yu Gothic UI", 1, 18));

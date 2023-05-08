@@ -24,30 +24,24 @@
 package parkingschedular.utility;
 
 /**
- * <p>RadioButtonCustom class.</p>
  *
  * @author Nirbhay Pundir
- * @version $Id: $Id
  */
-
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.JRadioButton;
+
 public class RadioButtonCustom extends JRadioButton {
 
-    /**
-     * <p>Constructor for RadioButtonCustom.</p>
-     */
     public RadioButtonCustom() {
         setOpaque(false);
         setCursor(new Cursor(Cursor.HAND_CURSOR));
         setBackground(new Color(69, 124, 235));
     }
 
-    /** {@inheritDoc} */
     @Override
     public void paint(Graphics grphcs) {
         super.paint(grphcs);

@@ -34,22 +34,13 @@ import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
 /**
- * <p>
- * LoginGUI class.
- * </p>
  *
  * @author Nirbhay Pundir
- * @version $Id: $Id
  */
 public class LoginGUI extends javax.swing.JFrame {
 
     Utility u;
 
-    /**
-     * <p>
-     * Constructor for LoginGUI.
-     * </p>
-     */
     public LoginGUI() {
         u = new Utility();
         initComponents();
@@ -359,13 +350,6 @@ public class LoginGUI extends javax.swing.JFrame {
         u.yMouse = evt.getY();
     }// GEN-LAST:event_jPanel1MousePressed
 
-    /**
-     * <p>
-     * main.
-     * </p>
-     *
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code

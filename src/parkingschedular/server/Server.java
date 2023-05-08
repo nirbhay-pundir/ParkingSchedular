@@ -24,7 +24,7 @@
 package parkingschedular.server;
 
 import parkingschedular.ParkingSchedular;
-import parkingschedular.UserDetails;
+import parkingschedular.utility.UserDetails;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -39,12 +39,8 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
- * <p>
- * Server class.
- * </p>
  *
  * @author Nirbhay Pundir
- * @version $Id: $Id
  */
 public class Server {
 
@@ -52,13 +48,6 @@ public class Server {
     static String user = "";
     static String pass = "";
 
-    /**
-     * <p>
-     * connect.
-     * </p>
-     *
-     * @return a Connection object
-     */
     public static Connection connect() {
         Connection con = null;
         try {
@@ -70,19 +59,6 @@ public class Server {
         }
     }
 
-    /**
-     * <p>
-     * register.
-     * </p>
-     *
-     * @param name a {@link java.lang.String} object
-     * @param phone a {@link java.lang.String} object
-     * @param email a {@link java.lang.String} object
-     * @param pass a {@link java.lang.String} object
-     * @param vehicle a {@link java.lang.String} object
-     * @param vehicleType a int
-     * @return a int
-     */
     public int register(String name, String phone, String email, String pass, String vehicle, int vehicleType) {
         try {
             String query = "INSERT INTO userinfo values('" + name + "','" + phone + "','" + email + "','" + pass + "','"
@@ -106,15 +82,6 @@ public class Server {
         }
     }
 
-    /**
-     * <p>
-     * login.
-     * </p>
-     *
-     * @param email a {@link java.lang.String} object
-     * @param password a {@link java.lang.String} object
-     * @return a int
-     */
     public int login(String email, String password) {
         int result = 1;
         try {
@@ -133,18 +100,11 @@ public class Server {
             System.out.println(e);
             return -1;
         } catch (NullPointerException e) {
+            e.printStackTrace();
             return -1;
         }
     }
 
-    /**
-     * <p>
-     * userDetails.
-     * </p>
-     *
-     * @param email a {@link java.lang.String} object
-     * @return a {@link parkingschedular.UserDetails} object
-     */
     public UserDetails userDetails(String email) {
         try {
             String query = "SELECT * FROM userinfo WHERE email = '" + email + "'";
@@ -168,13 +128,6 @@ public class Server {
         }
     }
 
-    /**
-     * <p>
-     * getAvailableSlot.
-     * </p>
-     *
-     * @return a int
-     */
     public int getAvailableSlot() {
         try {
             String query = "SELECT * FROM slots";
@@ -201,19 +154,6 @@ public class Server {
         }
     }
 
-    /**
-     * <p>
-     * bookSlot.
-     * </p>
-     *
-     * @param id a int
-     * @param name a {@link java.lang.String} object
-     * @param vehicle a {@link java.lang.String} object
-     * @param arrivalTime a {@link java.lang.String} object
-     * @param payment a {@link java.lang.String} object
-     * @param type a int
-     * @return a int
-     */
     public int bookSlot(int id, String name, String vehicle, String arrivalTime, String payment, int type) {
         try {
             String query = "INSERT INTO slots values(" + id + ",'" + name + "','" + ParkingSchedular.Email + "','"
@@ -265,17 +205,6 @@ public class Server {
         }
     }
 
-    /**
-     * <p>
-     * updateUserDetails.
-     * </p>
-     *
-     * @param name a {@link java.lang.String} object
-     * @param phone a {@link java.lang.String} object
-     * @param email a {@link java.lang.String} object
-     * @param vehicle a {@link java.lang.String} object
-     * @param vehicleType a int
-     */
     public void updateUserDetails(String name, String phone, String email, String vehicle, int vehicleType) {
         try {
             String query = "UPDATE userinfo SET name='" + name + "', phone='" + phone + "', email='" + email
