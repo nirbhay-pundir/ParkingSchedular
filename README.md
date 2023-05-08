@@ -4,9 +4,9 @@ This is a Java Swing application that allows users to manage vehicle parking in 
 # Features
 The Vehicle Parking Management System has the following features:
 
-Login and registration for users
-Adding new vehicles to the parking lot
-Displaying the list of parked vehicles
+- Login and registration for users
+- Adding new vehicles to the parking lot
+- Displaying the list of parked vehicles
 Assigning parking slots to vehicles
 Removing vehicles from the parking lot
 Calculating parking charges based on the duration of parking
