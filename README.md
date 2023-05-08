@@ -19,7 +19,7 @@ The Vehicle Parking Management System has the following features:
 
 ## Technologies Used
 
-- Java 8
+- Java 12
 - Java Swing for GUI
 - JDBC for database connectivity
 - MySQL database
@@ -28,18 +28,20 @@ The Vehicle Parking Management System has the following features:
 
 To run this application, you need:
 
-- Java 8 or higher
+- Java 12 or higher
 - MySQL database server
 - MySQL JDBC driver
 
 ## How to Run
 
-Clone the repository to your local machine.
-Create a new MySQL database using the parking_lot.sql script provided in the sql folder.
-Open the project in your preferred Java IDE.
-Set the database connection properties in the DBConnection.java file.
-Run the Main.java file to start the application.
-Screenshots
+1. Clone the repository to your local machine.
+2. Create a new MySQL database using the script.sql script provided in the sql folder.
+3. Open the project in your preferred Java IDE.
+4. Set the database connection properties in the server.java file.
+5. Run the ParkingSchedular.java file to start the application.
+
+## Screenshots
+
 Login Screen
 Vehicle Parking Screen
 Parking Receipt
