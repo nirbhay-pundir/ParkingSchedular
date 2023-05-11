@@ -135,8 +135,8 @@ public class LoadingScreenGUI extends javax.swing.JFrame implements Runnable {
         try {
             while (i <= 100) {
                 jProgressBar1.setValue(i + 10);
-                Thread.sleep(100);
-                i += 5;
+                Thread.sleep(50);
+                i += 1;
             }
         } catch (InterruptedException e) {
         }
