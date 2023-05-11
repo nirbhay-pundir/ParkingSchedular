@@ -44,9 +44,9 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Server {
 
-    static String url = "jdbc:mysql://localhost:3306/parkingschedular?zeroDateTimeBehavior=CONVERT_TO_NULL";
-    static String user = "";
-    static String pass = "";
+    static String url = "";// set server url
+    static String user = "";// set username
+    static String pass = "";// set password
 
     public static Connection connect() {
         Connection con = null;
@@ -123,7 +123,8 @@ public class Server {
             System.out.println(e);
             return null;
         } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed", ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed",
+                    ERROR_MESSAGE);
             return null;
         }
     }
@@ -190,8 +191,8 @@ public class Server {
             ResultSet res = sta.executeQuery();
             while (res.next()) {
                 String r = "Slot " + res.getInt(1);
-                Object[] row = {res.getInt(1), res.getString(2), res.getString(4), res.getString(5), res.getString(6),
-                    res.getString(7)};
+                Object[] row = { res.getInt(1), res.getString(2), res.getString(4), res.getString(5), res.getString(6),
+                        res.getString(7) };
                 model.addRow(row);
                 bModel.addElement(r);
             }
@@ -201,7 +202,8 @@ public class Server {
         } catch (SQLException e) {
             System.out.println(e);
         } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed", ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed",
+                    ERROR_MESSAGE);
         }
     }
 
@@ -220,7 +222,8 @@ public class Server {
         } catch (SQLException e) {
             System.out.println(e);
         } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed", ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed",
+                    ERROR_MESSAGE);
         }
     }
 
@@ -238,11 +241,14 @@ public class Server {
         } catch (SQLException e) {
             System.out.println(e);
         } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed", ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed",
+                    ERROR_MESSAGE);
         }
         try {
-            String query = "INSERT INTO released_slots values(" + t.getValueAt(index, 0) + ",'" + t.getValueAt(index, 1) + "','" + ParkingSchedular.Email + "','"
-                    + t.getValueAt(index, 2) + "'," + t.getValueAt(index, 4) + ",'" + t.getValueAt(index, 3) + "','" + time + "','" + charge + "')";
+            String query = "INSERT INTO released_slots values(" + t.getValueAt(index, 0) + ",'" + t.getValueAt(index, 1)
+                    + "','" + ParkingSchedular.Email + "','"
+                    + t.getValueAt(index, 2) + "'," + t.getValueAt(index, 4) + ",'" + t.getValueAt(index, 3) + "','"
+                    + time + "','" + charge + "')";
             System.out.println(query);
             Statement sta;
             int res;
@@ -254,7 +260,8 @@ public class Server {
         } catch (SQLException e) {
             System.out.println(e);
         } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed", ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Failed to establish connection with server!", "Connection Failed",
+                    ERROR_MESSAGE);
         }
     }
 }
